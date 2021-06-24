@@ -10,6 +10,8 @@ and MVC. I've separated the API and business parts. That's why they are repeated
 for the entities. However, they have been designed this way because in the public API some data
 cannot be accessed. So the JSON models are needed.
 
+The application starts with pre-populated data.
+
 To download the code to your local machine you must have git in your local environment. 
 Having done that proceed with the command: 
 
