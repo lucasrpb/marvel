@@ -6,6 +6,13 @@ import java.io.Serializable;
 @Embeddable
 public class UrlModel implements Serializable {
 
+    public UrlModel(){}
+
+    public UrlModel(String type, String url){
+        this.url = url;
+        this.type = type;
+    }
+
     @Column(nullable = true)
     private String type;
 

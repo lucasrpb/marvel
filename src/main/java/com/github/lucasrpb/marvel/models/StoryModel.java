@@ -26,12 +26,8 @@ public class StoryModel {
     @Embedded
     private ImageModel thumbnail;
 
-    /*@ManyToMany(cascade = { CascadeType.ALL })
-    @JoinTable(
-            joinColumns = { @JoinColumn(name = "story_id") },
-            inverseJoinColumns = { @JoinColumn(name = "character_id") }
-    )
-    private List<CharacterModel> characters = new ArrayList<>();*/
+    @ManyToMany(mappedBy = "stories")
+    private List<CharacterModel> characters = new ArrayList<>();
 
     public int getId() {
         return id;
@@ -81,11 +77,11 @@ public class StoryModel {
         this.thumbnail = thumbnail;
     }
 
-    /*public List<CharacterModel> getCharacters() {
+    public List<CharacterModel> getCharacters() {
         return characters;
     }
 
     public void setCharacters(List<CharacterModel> characters) {
         this.characters = characters;
-    }*/
+    }
 }

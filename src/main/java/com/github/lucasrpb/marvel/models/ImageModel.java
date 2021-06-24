@@ -5,6 +5,13 @@ import javax.persistence.*;
 @Embeddable
 public class ImageModel {
 
+    public ImageModel(){}
+
+    public ImageModel(String path, String extension){
+        this.path = path;
+        this.extension = extension;
+    }
+
     @Column(nullable = true)
     private String path;
 

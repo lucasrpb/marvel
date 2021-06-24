@@ -48,14 +48,35 @@ public class CharacterModel {
     )
     private List<ComicModel> comics = new ArrayList<>();
 
-    /*@ManyToMany
+    @ManyToMany(cascade = {
+            CascadeType.PERSIST,
+            CascadeType.MERGE
+    })
+    @JoinTable(name = "character_stories",
+            joinColumns = @JoinColumn(name = "character_id"),
+            inverseJoinColumns = @JoinColumn(name = "story_id")
+    )
     private List<StoryModel> stories = new ArrayList<>();
 
-    @ManyToMany
+    @ManyToMany(cascade = {
+            CascadeType.PERSIST,
+            CascadeType.MERGE
+    })
+    @JoinTable(name = "character_events",
+            joinColumns = @JoinColumn(name = "character_id"),
+            inverseJoinColumns = @JoinColumn(name = "event_id")
+    )
     private List<EventModel> events = new ArrayList<>();
 
-    @ManyToMany
-    private List<SeriesModel> series = new ArrayList<>();*/
+    @ManyToMany(cascade = {
+            CascadeType.PERSIST,
+            CascadeType.MERGE
+    })
+    @JoinTable(name = "character_series",
+            joinColumns = @JoinColumn(name = "character_id"),
+            inverseJoinColumns = @JoinColumn(name = "series_id")
+    )
+    private List<SeriesModel> series = new ArrayList<>();
 
     public int getId() {
         return id;
@@ -121,7 +142,7 @@ public class CharacterModel {
         this.comics = comics;
     }
 
-    /*public List<StoryModel> getStories() {
+    public List<StoryModel> getStories() {
         return stories;
     }
 
@@ -143,5 +164,5 @@ public class CharacterModel {
 
     public void setSeries(List<SeriesModel> series) {
         this.series = series;
-    }*/
+    }
 }

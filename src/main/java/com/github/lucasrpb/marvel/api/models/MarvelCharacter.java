@@ -16,6 +16,9 @@ public class MarvelCharacter {
     private List<UrlModel> urls;
     private ImageModel thumbnail;
     private ComicList comics;
+    private StoryList stories;
+    private EventList events;
+    private SeriesList series;
 
     public int getId() {
         return id;
@@ -79,5 +82,29 @@ public class MarvelCharacter {
 
     public void setComics(ComicList comics) {
         this.comics = comics;
+    }
+
+    public StoryList getStories() {
+        return stories;
+    }
+
+    public void setStories(StoryList stories) {
+        this.stories = stories;
+    }
+
+    public EventList getEvents() {
+        return events;
+    }
+
+    public void setEvents(EventList events) {
+        this.events = events;
+    }
+
+    public SeriesList getSeries() {
+        return series;
+    }
+
+    public void setSeries(SeriesList series) {
+        this.series = series;
     }
 }

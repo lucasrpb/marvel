@@ -36,8 +36,8 @@ public class SeriesModel {
     @Embedded
     private ImageModel thumbnail;
 
-    /*@ManyToMany(mappedBy = "characters")
-    private List<CharacterModel> characters = new ArrayList<>();*/
+    @ManyToMany(mappedBy = "series")
+    private List<CharacterModel> characters = new ArrayList<>();
 
     public int getId() {
         return id;
@@ -111,11 +111,11 @@ public class SeriesModel {
         this.thumbnail = thumbnail;
     }
 
-    /*public List<CharacterModel> getCharacters() {
+    public List<CharacterModel> getCharacters() {
         return characters;
     }
 
     public void setCharacters(List<CharacterModel> characters) {
         this.characters = characters;
-    }*/
+    }
 }
