@@ -12,6 +12,17 @@ cannot be accessed. So the JSON models are needed.
 
 The application starts with pre-populated data.
 
+Examples of testing using tools like Postman: 
+
+_To get all characters:_
+http://localhost:3000/v1/public/characters?name=Lucas-1&limit=10
+
+_To get one specific character:_
+http://localhost:3000/v1/public/characters/87
+
+Observation: the ids generated are auto-incremented. So, to find the existing ones to test, 
+call the api http://localhost:3000/v1/public/characters to get all and pick one id!
+
 To download the code to your local machine you must have git in your local environment. 
 Having done that proceed with the command: 
 
